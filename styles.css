@@ -1,0 +1,283 @@
+/********************* NOTES ************************
+The basic resets below allow you to create your own styling
+without having to fight some of the most annoying built-in 
+agent user styles.
+****************************************************/
+
+/************* Basic Resets ***************/
+
+h1, h2, h3, h4, p, ul, ol, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul, nav ol {
+    list-style-type: none;
+}
+
+/******** Additional resets *********/
+a { text-decoration: none; }
+
+img {
+    display: block;
+    max-width: 100%; 
+    height: auto;
+}
+
+* { box-sizing: border-box; }
+
+/************ End CSS Reset  *************/
+
+
+/********************* NOTES ************************
+Below are the updated colors. These replace the original hex codes.
+****************************************************/
+
+/*********** Colors ***********
+
+primary = #4A90E2;
+secondary = #F5A623;
+accent = #7ED321;
+text default = #4A4A4A;
+
+********************************/
+
+
+/************* Basic Page Rules ************/
+
+body {
+    font-family: 'Verdana', sans-serif;
+    color: #4A4A4A;
+    background: #1F1F1F;
+    line-height: 1.6;
+}
+
+/************* Typography ************/
+
+h1, h2, h3, h4, nav { 
+    font-family: 'Arial Black', sans-serif;
+    font-weight: bold; 
+    color: #F5A623;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+}
+
+h3 { 
+    font-size: 1.8em;
+    margin-bottom: 0.6em;
+}
+
+h4 { 
+    font-size: 1.5em;
+    margin-bottom: 0.4em;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+}
+
+a { 
+    color: #7ED321; 
+}
+
+.social { 
+    font-size: 2em; 
+}
+
+.centered { 
+    text-align: center; 
+}
+
+/****************** Grid ******************/
+
+.primary { background: #4A90E2; }
+.secondary { background: #F5A623; }
+
+/****************** Header and Main Navigation ****************/
+
+header {
+    padding: 30px;
+    background: #4A90E2;
+    color: #FFFFFF;
+}
+
+header .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#logo {
+    margin-left: 20px;
+}
+
+#mainnav {
+    margin-bottom: 10px;
+}
+
+#mainnav ul {
+    display: flex;
+    justify-content: center;
+}
+
+#mainnav ul li a {
+    display: block;
+    color: #FFFFFF;
+    background: #7ED321;
+    border-left: 2px solid #F5A623;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+#mainnav ul li:first-of-type a {
+    border: none;
+}
+
+/***************** Section Specific Rules *****************/
+
+#work {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#work img, .additional-projects img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.featured, .projects, #page-template #work section {
+    margin-bottom: 50px;
+}
+
+#about-contact, .additional-projects {
+    padding: 30px;
+}
+
+#about-contact img {
+    margin-bottom: 15px;
+}
+
+footer {
+    padding: 30px;
+    margin-bottom: 50px;
+    background: #4A90E2;
+    color: #FFFFFF;
+}
+
+@media only screen and (min-width: 650px) {
+    #work {
+        padding: 20px 15px;
+    }
+
+    #work article, h2 {
+        padding: 0 15px;
+    }
+
+    .projects, #page-template #work section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .projects article, #page-template #work section article {
+        width: 48%;
+    }
+
+    .additional-projects .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .additional-projects h2 {
+        flex-basis: 100%;
+    }
+
+    .additional-projects article {
+        width: 48%;
+        padding: 0 15px;
+    }
+
+    #about-contact {
+        padding: 0;
+    }
+
+    #about-contact .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px 15px;
+    }
+
+    #about-contact .profile-photo {
+        flex: 1;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    #about-contact article {
+        padding: 0 15px;
+    }
+
+    #about-contact article:first-of-type {
+        flex: 2;
+    }
+
+    #about-contact article:last-of-type {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .featured {
+        display: flex;
+    }
+
+    .featured article {
+        flex: 1;
+    }
+
+    .additional-projects article {
+        width: 23%;
+    }
+
+    #about-contact .wrapper {
+        flex-wrap: nowrap;
+    }
+
+    #about-contact article:last-of-type {
+        flex: 2;
+        flex-basis: 0;
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    .wrapper {
+        width: 1080px;
+        margin: auto;
+    }
+
+    header .wrapper {
+        padding: 0 20px;
+    }
+
+    .projects article {
+        width: 23%;
+    }
+}
